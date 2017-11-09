@@ -35,7 +35,7 @@ docker image in deployments, a common annotation or label).
 
 **NOTE**: This assumes you have all of the above dependency requirements.
 
-Run the following script (changing out os_version for darwin/linux/windows depending on your system) to get a basic
+Run the following script (changing out $OS_VERSION for darwin/linux/windows depending on your system) to get a basic
 setup.
 
 ```bash
@@ -43,7 +43,7 @@ make install-go-deps
 make vendor
 make install-python-deps
 make build-cross
-./out/lostromos-os_version-amd64 version
+./out/lostromos-$OS_VERSION-amd64 version
 minikube start
 eval $(minikube docker-env)
 make docker-build-test
